@@ -57,16 +57,10 @@ public class MainActivityJafar extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
 
-        if (Build.VERSION.SDK_INT < 23) {
-            return;
-        }
-        if (ContextCompat.checkSelfPermission(
-                MainActivityJafar.this,
-                Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
+        if (!(Build.VERSION.SDK_INT < 23)) {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 0);
         }
-
+ 
 
         tb_JafarDataSource tbJafarDataSource = new tb_JafarDataSource(this);
         tbJafarDataSource.Open();
