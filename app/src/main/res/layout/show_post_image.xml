@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linerImageFac"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imvPhotoFactorShowLarg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linerPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgmain_jafar"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtNameComShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.5dp"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="4dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="متن"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/txtProNameShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.5dp"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="4dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="متن"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/txtDateShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.5dp"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="4dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="متن"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/txtPayCashShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.5dp"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="4dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="متن"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/txtCheckNumShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.5dp"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="4dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="متن"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/txtAlbaqiShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.5dp"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="4dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="متن"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/txtKeyWordsShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.5dp"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="4dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="متن"
+            android:textColor="#fff" />
+
+        <ImageView
+            android:id="@+id/imgFactorShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

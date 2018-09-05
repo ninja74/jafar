@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgmain_jafar"
+    android:orientation="vertical"
+    tools:context="iran.com.jafar.SearchActivityJafar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edtCompanySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="نام شرکت"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+    <EditText
+        android:id="@+id/edtProductSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="نام محصول"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+    <EditText
+        android:id="@+id/edtYearSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="سال مثال 1397"
+        android:inputType="number"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+
+    <EditText
+        android:id="@+id/edtMonthSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="ماه"
+        android:inputType="number"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+
+    <EditText
+        android:id="@+id/edtDaysSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="روز"
+        android:inputType="number"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+
+    <EditText
+        android:id="@+id/edtKeywordsSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="کلمات کلیدی"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bgbtn_jafar"
+        android:text="جستجو کن"
+        android:textColor="#000" />
+
+
+    <ListView
+        android:id="@+id/lstResSE"
+        android:dividerHeight="-2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

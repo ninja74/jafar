@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgmain_jafar"
+    android:orientation="vertical"
+    tools:context="iran.com.jafar.InsertActivityJafar">
+
+    <EditText
+        android:id="@+id/edtCompanyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:gravity="center"
+        android:hint="نام شرکت"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+
+        android:paddingLeft="10dp"
+
+        android:paddingTop="8dp"
+
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+    <EditText
+        android:id="@+id/edtProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:gravity="center"
+        android:hint="نام محصول"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imvPhoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <Button
+            android:id="@+id/btnTakePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/bgbtn_jafar"
+            android:text="وارد کردن عکس"
+            android:textColor="#000"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="روز"
+            android:inputType="number"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp"
+            android:textColor="#fff"
+            android:textColorHint="#dad3d3" />
+
+        <EditText
+            android:id="@+id/edtMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="ماه"
+            android:inputType="number"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp"
+            android:textColor="#fff"
+            android:textColorHint="#dad3d3" />
+
+        <EditText
+            android:id="@+id/edtYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="سال"
+            android:inputType="number"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp"
+            android:text="1397"
+            android:textColor="#fff"
+            android:textColorHint="#dad3d3" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chkPayCash"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_with_border"
+        android:layoutDirection="rtl"
+        android:text="پرداخت نقدی"
+        android:textColor="#fff"
+        android:theme="@style/CheCKBox_Jafar"
+        tools:ignore="UnusedAttribute" />
+
+    <CheckBox
+        android:id="@+id/chkCheckNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_with_border"
+        android:layoutDirection="rtl"
+        android:text="چک به شماره و تاریخ"
+        android:textColor="#fff"
+        android:theme="@style/CheCKBox_Jafar"
+        tools:ignore="UnusedAttribute" />
+
+    <CheckBox
+        android:id="@+id/chkBaqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_with_border"
+        android:layoutDirection="rtl"
+        android:text="الباقی"
+        android:textColor="#fff"
+        android:theme="@style/CheCKBox_Jafar"
+        tools:ignore="UnusedAttribute" />
+
+
+    <EditText
+        android:id="@+id/edtKeywords"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgedt_jafar"
+        android:gravity="center"
+        android:hint="کلمات کلیدی"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#fff"
+        android:textColorHint="#dad3d3" />
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bgbtn_jafar"
+        android:text="ثبت"
+        android:textColor="#000" />
+
+</LinearLayout>

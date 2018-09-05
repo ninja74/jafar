@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bgmain_jafar"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtAlertdiJafar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bgedt_jafar"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="وارد کنید"
+            android:inputType="number"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <TextView
+            android:id="@+id/txtAlertdiJafar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg_with_border"
+            android:ems="10"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="7dp"
+            android:text="متن متن" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnAlertdiJafar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/bgbtn_jafar"
+        android:text="ثبت"
+
+
+        android:textColor="#000" />
+
+
+</RelativeLayout>

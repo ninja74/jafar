@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/insertDate"
+        android:title="ورود اطلاعات" />
+
+    <item android:title="جستجو"
+        android:id="@+id/searchJafar"/>
+
+
+    <item android:title="بک آپ"
+        android:id="@+id/backupDataXls"/>
+
+
+    <item android:title="ورود با اکسل"
+        android:id="@+id/insertDataXls"/>
+
+</menu>
