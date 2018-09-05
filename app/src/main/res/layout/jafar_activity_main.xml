@@ -9,49 +9,24 @@
     tools:context="iran.com.jafar.MainActivityJafar">
 
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar_jafar"
-        android:background="?attr/colorPrimary"
-        android:elevation="8dp">
+    <include layout="@layout/toolbar" />
 
-        <RelativeLayout
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listView_MainPageJafar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:divider="#fff"
+            android:dividerHeight="-2dp" />
 
-            <ImageView
-                android:id="@+id/ImGviewTollbar"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:layout_margin="6dp"
-                android:src="@mipmap/ic_launcher" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/ImGviewTollbar"
-                android:text="ارزان سرای کمیجانی"
-                android:textSize="23dp"
-                android:textColor="#fff"
-
-                />
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
-
-
-    <ListView
-        android:id="@+id/listView_MainPageJafar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:divider="#fff"
-        android:dividerHeight="-2dp" />
-
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 
 </LinearLayout>

@@ -1,40 +1,31 @@
 package iran.com.jafar;
 
 import android.Manifest;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.squareup.picasso.Picasso;
-
 import java.io.File;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Handler;
 
 import Database.DataSource.tb_JafarDataSource;
 import Database.DatabaseManagement;
@@ -45,6 +36,11 @@ import Database.Table.tb_Jafar;
 public class MainActivityJafar extends AppCompatActivity {
 
     AlertDialog alertDialogJafarShowPost;
+    SwipeRefreshLayout swipeRefreshLayout;
+    UserList listViewPersonAdapter;
+    ListView listView_MainPageJafar;
+    List<tb_Jafar> lstPI;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,22 +51,50 @@ public class MainActivityJafar extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_jafar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+
+
+        swipeRefreshLayout.setColorScheme(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
 
 
         if (!(Build.VERSION.SDK_INT < 23)) {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 0);
         }
- 
+
 
         tb_JafarDataSource tbJafarDataSource = new tb_JafarDataSource(this);
         tbJafarDataSource.Open();
-        List<tb_Jafar> lstPI = tbJafarDataSource.GetList();
+        lstPI = tbJafarDataSource.GetList();
         tbJafarDataSource.Close();
 
 
-        ListView listView_MainPageJafar = (ListView) findViewById(R.id.listView_MainPageJafar);
-        UserList listViewPersonAdapter = new UserList(MainActivityJafar.this, lstPI, R.layout.customelistview, clickInterface);
+        listView_MainPageJafar = (ListView) findViewById(R.id.listView_MainPageJafar);
+        listViewPersonAdapter = new UserList(MainActivityJafar.this, lstPI, R.layout.customelistview, clickInterface);
         listView_MainPageJafar.setAdapter(listViewPersonAdapter);
+
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+
+
+                new android.os.Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        swipeRefreshLayout.setRefreshing(false);
+                        // TODO : How to Refresh UserList ?
+
+                    }
+                }, 5000);
+
+
+            }
+        });
+
 
     }
 
@@ -107,16 +131,13 @@ public class MainActivityJafar extends AppCompatActivity {
             bitmapoption.inJustDecodeBounds = false;
 
 
-
-
             //Bitmap.createScaledBitmap(, imageWidth, imageHeight, false)
-
 
 
             //Picasso.get().load(Uri.parse("file://"+ data.UrlImg)).into(imgFactorShow);
 
 
-            Bitmap neadsf = BitmapFactory.decodeFile(data.UrlImg , bitmapoption);
+            Bitmap neadsf = BitmapFactory.decodeFile(data.UrlImg, bitmapoption);
             imgFactorShow.setImageBitmap(neadsf);
 
 
@@ -142,8 +163,7 @@ public class MainActivityJafar extends AppCompatActivity {
             bitmapoption.inJustDecodeBounds = false;
 
 
-
-            Bitmap neadsf = BitmapFactory.decodeFile(imgUri , bitmapoption);
+            Bitmap neadsf = BitmapFactory.decodeFile(imgUri, bitmapoption);
 
             imvPhotoFactorShowLarg.setImageBitmap(neadsf);
             //     imvPhotoFactorShowLarg.setImageBitmap(BitmapFactory.decodeFile(imgUri));
