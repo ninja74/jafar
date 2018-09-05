@@ -1,16 +1,11 @@
 package iran.com.jafar;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Camera;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -25,7 +20,6 @@ import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Random;
@@ -180,8 +174,6 @@ public class InsertActivityJafar extends AppCompatActivity {
 
                 thumbnail.compress(Bitmap.CompressFormat.PNG , 100 , bytes);
                 byte[] bitbyte =  bytes.toByteArray();
-
-                Toast.makeText(this, thumbnail.getWidth()+"", Toast.LENGTH_SHORT).show();
 
                 String folder_main = "image komijani";
 

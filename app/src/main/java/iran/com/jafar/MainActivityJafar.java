@@ -64,32 +64,22 @@ public class MainActivityJafar extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 0);
         }
 
-
-        tb_JafarDataSource tbJafarDataSource = new tb_JafarDataSource(this);
-        tbJafarDataSource.Open();
-        lstPI = tbJafarDataSource.GetList();
-        tbJafarDataSource.Close();
-
-
         listView_MainPageJafar = (ListView) findViewById(R.id.listView_MainPageJafar);
-        listViewPersonAdapter = new UserList(MainActivityJafar.this, lstPI, R.layout.customelistview, clickInterface);
-        listView_MainPageJafar.setAdapter(listViewPersonAdapter);
-
+        GetDataFromDB_Set();
 
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
 
 
-
                 new android.os.Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         swipeRefreshLayout.setRefreshing(false);
-                        // TODO : How to Refresh UserList ?
-
+                        GetDataFromDB_Set();
+                        Toast.makeText(MainActivityJafar.this, "اطلاعات بروزرسانی شد", Toast.LENGTH_SHORT).show();
                     }
-                }, 5000);
+                }, 3000);
 
 
             }
@@ -98,6 +88,14 @@ public class MainActivityJafar extends AppCompatActivity {
 
     }
 
+    private void GetDataFromDB_Set() {
+        tb_JafarDataSource tbJafarDataSource = new tb_JafarDataSource(MainActivityJafar.this);
+        tbJafarDataSource.Open();
+        lstPI = tbJafarDataSource.GetList();
+        tbJafarDataSource.Close();
+        listViewPersonAdapter = new UserList(MainActivityJafar.this, lstPI, R.layout.customelistview, clickInterface);
+        listView_MainPageJafar.setAdapter(listViewPersonAdapter);
+    }
 
     UserList.imagetxtInterFace clickInterface = new UserList.imagetxtInterFace() {
         @Override
