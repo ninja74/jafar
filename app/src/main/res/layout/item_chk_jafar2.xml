@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bgmain_jafar"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/linCkeckDate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/edtDaychk2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/bgedt_jafar"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="روز"
+                android:inputType="number"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <EditText
+                android:id="@+id/edtMonthchk2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/bgedt_jafar"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="ماه"
+                android:inputType="number"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <EditText
+                android:id="@+id/edtYearchk2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/bgedt_jafar"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="سال"
+                android:inputType="number"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtAlertdiJafar2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/bgedt_jafar"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="وارد کنید"
+                android:inputType="number"
+                android:paddingBottom="4dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <TextView
+                android:id="@+id/txtAlertdiJafar2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:background="@drawable/bg_with_border"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:text="متن متن" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAlertdiJafar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:background="@drawable/bgbtn_jafar"
+        android:text="ثبت" />
+
+</RelativeLayout>
